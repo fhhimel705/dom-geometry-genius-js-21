@@ -30,7 +30,7 @@
             <label for="triangle-b-field">cm</label>
             <input type="number" id="triangle-h-field" placeholder="h" class="px-2 bg-gray-200 rounded-sm w-3/12">
             <label for="triangle-h-field">cm</label>
-            <button class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
+            <button id="triangle-btn" class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
         <section class="text-center border order-2 p-5 rounded-xl">
             <img src="images/rectangle.png" class="mx-auto h-48" alt="">
@@ -40,7 +40,7 @@
             <label for="rectangle-w-field">cm</label>
             <input type="number" id="rectangle-i-field" placeholder="I" class="px-2 bg-gray-200 rounded-sm w-3/12">
             <label for="rectangle-i-field">cm</label>
-            <button class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
+            <button id="rectangle-btn" class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
         <section class="text-center border order-3 p-5 rounded-xl">
             <img src="images/parallelogram.png" class="mx-auto h-48" alt="">
@@ -50,10 +50,40 @@
             <label for="parallelogram-b-field">cm</label>
             <input type="number" id="parallelogram-h-field" placeholder="h" class="px-2 bg-gray-200 rounded-sm w-3/12">
             <label for="parallelogram-h-field">cm</label>
-            <button class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
+            <button id="parallelogram-btn" class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
         <section class="text-center border order-7 md:order-4  p-5 rounded-xl">
             <h3 class="text-center text-xl font-semibold underline">Area Calculation</h3>
+            <div class="grid grid-cols-3 mt-3">
+                <p class="me-auto">1.Triangle</p>
+                <p>0 cm<sup>2</sup></p>
+                <button class="bg-sky-500 text-sm py-1 px-1 text-white font-medium rounded-lg">Convert to m<sup>2</sup></button>
+            </div>
+            <div class="grid grid-cols-3 mt-3">
+                <p class="me-auto">2.Rectangle</p>
+                <p>0 cm<sup>2</sup></p>
+                <button class="bg-sky-500 text-sm py-1 px-1 text-white font-medium rounded-lg">Convert to m<sup>2</sup></button>
+            </div>
+            <div class="grid grid-cols-3 mt-3">
+                <p class="me-auto">3.Parallelogram</p>
+                <p>0 cm<sup>2</sup></p>
+                <button class="bg-sky-500 text-sm py-1 px-1 text-white font-medium rounded-lg">Convert to m<sup>2</sup></button>
+            </div>
+            <div class="grid grid-cols-3 mt-3">
+                <p class="me-auto">4.Rhombus</p>
+                <p>0 cm<sup>2</sup></p>
+                <button class="bg-sky-500 text-sm py-1 px-1 text-white font-medium rounded-lg">Convert to m<sup>2</sup></button>
+            </div>
+            <div class="grid grid-cols-3 mt-3">
+                <p class="me-auto">5.Pentagon</p>
+                <p>0 cm<sup>2</sup></p>
+                <button class="bg-sky-500 text-sm py-1 px-1 text-white font-medium rounded-lg">Convert to m<sup>2</sup></button>
+            </div>
+            <div class="grid grid-cols-3 items-center mt-3">
+                <p class="me-auto">6.Ellipse</p>
+                <p>0 cm<sup>2</sup></p>
+                <button class="bg-sky-500 text-sm py-1 px-1 text-white font-medium rounded-lg">Convert to m<sup>2</sup></button>
+            </div>
         </section>
         <section class="text-center border order-4 md:order-5 p-5 rounded-xl">
             <img src="images/rhombus.png" class="mx-auto h-48" alt="">
@@ -73,7 +103,7 @@
             <label for="pentagon-p-field">cm</label>
             <input type="number" id="pentagon-b-field" placeholder="b" class="px-2 bg-gray-200 rounded-sm w-3/12">
             <label for="pentagon-b-field">cm</label>
-            <button class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
+            <button id="pentagon-btn" class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
         <section class="text-center border  order-6 md:order-7 p-5 rounded-xl">
             <img src="images/ellipse.png" class="mx-auto h-48" alt="">
@@ -84,7 +114,7 @@
             <input type="number" id="ellipse-b-field" placeholder="b" class="px-2 bg-gray-200 rounded-sm w-3/12">
             <label for="ellipse-b-field">cm</label>
 
-            <button class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
+            <button id="ellipse-btn" class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
 
     </main>
