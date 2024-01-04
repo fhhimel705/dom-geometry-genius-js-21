@@ -1,3 +1,6 @@
 body{
     max-width: 1400px;
 }
+#triangle-div,#rectangle-div,#parallelogram-div,#rhombus-div,#pentagon-div,#ellipse-div{
+    display: none;
+}

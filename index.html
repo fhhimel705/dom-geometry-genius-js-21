@@ -18,7 +18,7 @@
             <p class="text-2xl font-medium text-gray-400">Geometry Genius</p>
         </div>
         <div>
-            <button class="px-7 py-2 bg-sky-500 text-xl text-white font-semibold rounded-xl">OverView</button>
+            <button class="md:px-7 px-2 md:py-2 py-1 bg-sky-500 text-md md:text-xl text-white font-semibold rounded-xl">OverView</button>
         </div>
     </header>
     <main class="grid grid-cols-1 md:grid-cols-4 mt-10 gap-5">
@@ -35,7 +35,7 @@
         <section class="text-center border order-2 p-5 rounded-xl">
             <img src="images/rectangle.png" class="mx-auto h-48" alt="">
             <h4 class="text-xl font-bold mt-3">Rectangle</h4>
-            <p class="text-gray-500 my-5">Area (A) = 0.5 x W x I</p>
+            <p class="text-gray-500 my-5">Area (A) =  W x I</p>
             <input type="number" id="rectangle-w-field" placeholder="W" class="px-2 bg-gray-200 rounded-sm w-3/12">
             <label for="rectangle-w-field">cm</label>
             <input type="number" id="rectangle-i-field" placeholder="I" class="px-2 bg-gray-200 rounded-sm w-3/12">
@@ -52,36 +52,39 @@
             <label for="parallelogram-h-field">cm</label>
             <button id="parallelogram-btn" class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
+        <!-- -------------------
+        area calculatins
+    ------------------------------ -->
         <section class="text-center border order-7 md:order-4  p-5 rounded-xl">
             <h3 class="text-center text-xl font-semibold underline">Area Calculation</h3>
-            <div class="grid grid-cols-3 mt-3">
+            <div id="triangle-div" class="grid grid-cols-3 mt-3 calculate-div">
                 <p class="me-auto">1.Triangle</p>
-                <p>0 cm<sup>2</sup></p>
+                <p><span id="triangle-area">0</span> cm<sup>2</sup></p>
                 <button class="bg-sky-500 text-sm py-1 px-1 text-white font-medium rounded-lg">Convert to m<sup>2</sup></button>
             </div>
-            <div class="grid grid-cols-3 mt-3">
+            <div class="grid grid-cols-3 mt-3" id="rectangle-div">
                 <p class="me-auto">2.Rectangle</p>
-                <p>0 cm<sup>2</sup></p>
+                <p><span id="rectangle-area">0</span> cm<sup>2</sup></p>
                 <button class="bg-sky-500 text-sm py-1 px-1 text-white font-medium rounded-lg">Convert to m<sup>2</sup></button>
             </div>
-            <div class="grid grid-cols-3 mt-3">
+            <div class="grid grid-cols-3 mt-3" id="parallelogram-div">
                 <p class="me-auto">3.Parallelogram</p>
-                <p>0 cm<sup>2</sup></p>
+                <p><span id="parallelogram-area">0</span> cm<sup>2</sup></p>
                 <button class="bg-sky-500 text-sm py-1 px-1 text-white font-medium rounded-lg">Convert to m<sup>2</sup></button>
             </div>
-            <div class="grid grid-cols-3 mt-3">
+            <div class="grid grid-cols-3 mt-3" id="rhombus-div">
                 <p class="me-auto">4.Rhombus</p>
-                <p>0 cm<sup>2</sup></p>
+                <p><span id="rhombus-area">0</span> cm<sup>2</sup></p>
                 <button class="bg-sky-500 text-sm py-1 px-1 text-white font-medium rounded-lg">Convert to m<sup>2</sup></button>
             </div>
-            <div class="grid grid-cols-3 mt-3">
+            <div class="grid grid-cols-3 mt-3" id="pentagon-div">
                 <p class="me-auto">5.Pentagon</p>
-                <p>0 cm<sup>2</sup></p>
+                <p><span id="pentagon-area">0</span> cm<sup>2</sup></p>
                 <button class="bg-sky-500 text-sm py-1 px-1 text-white font-medium rounded-lg">Convert to m<sup>2</sup></button>
             </div>
-            <div class="grid grid-cols-3 items-center mt-3">
+            <div class="grid grid-cols-3 items-center mt-3" id="ellipse-div">
                 <p class="me-auto">6.Ellipse</p>
-                <p>0 cm<sup>2</sup></p>
+                <p><span id="ellipse-area">0</span> cm<sup>2</sup></p>
                 <button class="bg-sky-500 text-sm py-1 px-1 text-white font-medium rounded-lg">Convert to m<sup>2</sup></button>
             </div>
         </section>
@@ -93,7 +96,7 @@
             <label for="rhombus-d1-field">cm</label>
             <input id="rhombus-d2-field" type="number" placeholder="d-2" class="px-2 bg-gray-200 rounded-sm w-3/12">
             <label for="rhombus-d2-field">cm</label>
-            <button class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
+            <button id="rhombus-btn" class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
         <section class="text-center border order-5 md:order-6 p-5 rounded-xl">
             <img src="images/pentagon.png" class="mx-auto h-48" alt="">
@@ -118,6 +121,7 @@
         </section>
 
     </main>
+    <script src="js fiels/calculate.js"></script>
 </body>
 
 </html>
