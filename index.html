@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
     <!-- tailwind link -->
     <script src="https://cdn.tailwindcss.com"></script>
-<!-- style link -->
-<link rel="stylesheet" href="style.css">
+    <!-- style link -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="mx-auto px-7 md:px-0">
     <header class="flex justify-between items-center mt-10">
         <div>
@@ -20,58 +22,72 @@
         </div>
     </header>
     <main class="grid grid-cols-1 md:grid-cols-4 mt-10 gap-5">
-        <section class="text-center border p-5 rounded-xl">
+        <section class="text-center order-1 border p-5 rounded-xl">
             <img src="images/triangle.png" class="mx-auto h-48" alt="">
             <h4 class="text-xl font-bold mt-3">Triangle</h4>
             <p class="text-gray-500 my-5">Area (A) = 0.5 x b x h</p>
-            <input type="number" class="bg-gray-200 rounded-md"><p>cm</p>
-            <input type="number" class="bg-gray-200 rounded-md"><p>cm</p>
+            <input type="number" id="triangle-b-field" placeholder="b" class="px-2 bg-gray-200 rounded-sm w-3/12">
+            <label for="triangle-b-field">cm</label>
+            <input type="number" id="triangle-h-field" placeholder="h" class="px-2 bg-gray-200 rounded-sm w-3/12">
+            <label for="triangle-h-field">cm</label>
             <button class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
-        <section class="text-center border p-5 rounded-xl">
+        <section class="text-center border order-2 p-5 rounded-xl">
             <img src="images/rectangle.png" class="mx-auto h-48" alt="">
             <h4 class="text-xl font-bold mt-3">Rectangle</h4>
             <p class="text-gray-500 my-5">Area (A) = 0.5 x W x I</p>
-            <input type="number" class="bg-gray-200 rounded-md"><p>cm</p>
-            <input type="number" class="bg-gray-200 rounded-md"><p>cm</p>
+            <input type="number" id="rectangle-w-field" placeholder="W" class="px-2 bg-gray-200 rounded-sm w-3/12">
+            <label for="rectangle-w-field">cm</label>
+            <input type="number" id="rectangle-i-field" placeholder="I" class="px-2 bg-gray-200 rounded-sm w-3/12">
+            <label for="rectangle-i-field">cm</label>
             <button class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
-        <section class="text-center border p-5 rounded-xl">
+        <section class="text-center border order-3 p-5 rounded-xl">
             <img src="images/parallelogram.png" class="mx-auto h-48" alt="">
             <h4 class="text-xl font-bold mt-3">Parallelogram</h4>
             <p class="text-gray-500 my-5">Area (A) = b x h</p>
-            <input type="number" class="bg-gray-200 rounded-md"><p>cm</p>
-            <input type="number" class="bg-gray-200 rounded-md"><p>cm</p>
+            <input type="number" id="parallelogram-b-field" placeholder="b" class="px-2 bg-gray-200 rounded-sm w-3/12">
+            <label for="parallelogram-b-field">cm</label>
+            <input type="number" id="parallelogram-h-field" placeholder="h" class="px-2 bg-gray-200 rounded-sm w-3/12">
+            <label for="parallelogram-h-field">cm</label>
             <button class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
-        <section class="text-center border p-5 rounded-xl">
-           <h3 class="text-center text-xl font-semibold underline">Area Calculation</h3>
+        <section class="text-center border order-7 md:order-4  p-5 rounded-xl">
+            <h3 class="text-center text-xl font-semibold underline">Area Calculation</h3>
         </section>
-        <section class="text-center border p-5 rounded-xl">
+        <section class="text-center border order-4 md:order-5 p-5 rounded-xl">
             <img src="images/rhombus.png" class="mx-auto h-48" alt="">
             <h4 class="text-xl font-bold mt-3">Rhombus</h4>
             <p class="text-gray-500 my-5">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
-            <input type="number" class="bg-gray-200 rounded-md"><p>cm</p>
-            <input type="number" class="bg-gray-200 rounded-md"><p>cm</p>
+            <input id="rhombus-d1-field" type="number" placeholder="d-1" class="px-2 bg-gray-200 rounded-sm w-3/12">
+            <label for="rhombus-d1-field">cm</label>
+            <input id="rhombus-d2-field" type="number" placeholder="d-2" class="px-2 bg-gray-200 rounded-sm w-3/12">
+            <label for="rhombus-d2-field">cm</label>
             <button class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
-        <section class="text-center border p-5 rounded-xl">
+        <section class="text-center border order-5 md:order-6 p-5 rounded-xl">
             <img src="images/pentagon.png" class="mx-auto h-48" alt="">
             <h4 class="text-xl font-bold mt-3">Pentagon</h4>
             <p class="text-gray-500 my-5">Area (A) = 0.5 x p x b</p>
-            <input type="number" class="bg-gray-200 rounded-md"><p>cm</p>
-            <input type="number" class="bg-gray-200 rounded-md"><p>cm</p>
+            <input type="number" id="pentagon-p-field" placeholder="p" class="px-2 bg-gray-200 rounded-sm w-3/12">
+            <label for="pentagon-p-field">cm</label>
+            <input type="number" id="pentagon-b-field" placeholder="b" class="px-2 bg-gray-200 rounded-sm w-3/12">
+            <label for="pentagon-b-field">cm</label>
             <button class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
-        <section class="text-center border p-5 rounded-xl">
+        <section class="text-center border  order-6 md:order-7 p-5 rounded-xl">
             <img src="images/ellipse.png" class="mx-auto h-48" alt="">
             <h4 class="text-xl font-bold mt-3">Ellipse</h4>
-            <p class="text-gray-500 my-5">Area (A) = pi x ab</p>
-            <input type="number" class="bg-gray-200 rounded-md"><p>cm</p>
-            <input type="number" class="bg-gray-200 rounded-md"><p>cm</p>
+            <p class="text-gray-500 my-5">Area (A) = pi x a x b</p>
+            <input type="number" id="ellipse-a-field" placeholder="a" class="px-2 bg-gray-200 rounded-sm w-3/12">
+            <label for="ellipse-a-field">cm</label>
+            <input type="number" id="ellipse-b-field" placeholder="b" class="px-2 bg-gray-200 rounded-sm w-3/12">
+            <label for="ellipse-b-field">cm</label>
+
             <button class="bg-sky-600 text-xl my-5 font-semibold text-white px-24 py-2 rounded-lg">Calculate</button>
         </section>
-       
+
     </main>
 </body>
+
 </html>
