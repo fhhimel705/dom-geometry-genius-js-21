@@ -26,9 +26,10 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
   const triangleDiv = document.getElementById("triangle-div");
   if (isNaN(area)) {
     alert("input number");
-  } 
-  else
-  {
+  } else if (area <= 0) {
+    alert("Enter positive number");
+    removeValue("triangle-b-field", "triangle-h-field");
+  } else {
     areaInnerText.innerText = area;
     showAreaDiv(triangleDiv);
     removeValue("triangle-b-field", "triangle-h-field");
@@ -43,6 +44,9 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
   const rectangleDiv = document.getElementById("rectangle-div");
   if (isNaN(area)) {
     alert("input number");
+  } else if (area <= 0) {
+    alert("Enter positive number");
+    removeValue("rectangle-w-field", "rectangle-i-field");
   } else {
     areaInnerText.innerText = area;
     showAreaDiv(rectangleDiv);
@@ -59,11 +63,14 @@ document
     const parallelogramDiv = document.getElementById("parallelogram-div");
     if (isNaN(area)) {
       alert("input number");
-    } else {
+    } else if (area <= 0) {
+      alert("Enter positive number");
+      removeValue("parallelogram-b-field", "parallelogram-h-field");
+    }
+    else {
       areaInnerText.innerText = area;
       showAreaDiv(parallelogramDiv);
-    removeValue("parallelogram-b-field", "parallelogram-h-field");
-
+      removeValue("parallelogram-b-field", "parallelogram-h-field");
     }
   });
 document.getElementById("rhombus-btn").addEventListener("click", function () {
@@ -74,11 +81,13 @@ document.getElementById("rhombus-btn").addEventListener("click", function () {
   const rhombusDiv = document.getElementById("rhombus-div");
   if (isNaN(area)) {
     alert("input number");
+  } else if (area <= 0) {
+    alert("Enter positive number");
+    removeValue("rhombus-d1-field", "rhombus-d2-field");
   } else {
     areaInnerText.innerText = area;
     showAreaDiv(rhombusDiv);
     removeValue("rhombus-d1-field", "rhombus-d2-field");
-
   }
 });
 document.getElementById("pentagon-btn").addEventListener("click", function () {
@@ -89,11 +98,13 @@ document.getElementById("pentagon-btn").addEventListener("click", function () {
   const pentagonDiv = document.getElementById("pentagon-div");
   if (isNaN(area)) {
     alert("input number");
+  } else if (area <= 0) {
+    alert("Enter positive number");
+    removeValue("pentagon-p-field", "pentagon-b-field");
   } else {
     areaInnerText.innerText = area;
     showAreaDiv(pentagonDiv);
     removeValue("pentagon-p-field", "pentagon-b-field");
-
   }
 });
 document.getElementById("ellipse-btn").addEventListener("click", function () {
@@ -104,10 +115,12 @@ document.getElementById("ellipse-btn").addEventListener("click", function () {
   const ellipseDiv = document.getElementById("ellipse-div");
   if (isNaN(area)) {
     alert("input number");
+  } else if (area <= 0) {
+    alert("Enter positive number");
+    removeValue("ellipse-b-field", "ellipse-a-field");
   } else {
     areaInnerText.innerText = area;
     showAreaDiv(ellipseDiv);
     removeValue("ellipse-a-field", "ellipse-b-field");
-
   }
 });
